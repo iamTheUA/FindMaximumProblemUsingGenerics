@@ -1,37 +1,26 @@
 package Day13;
 
 class takeObject implements Comparable<takeObject> {
-
-	String st = null;
-	Double i = null;
+	Double value = null;
+	String st;
 
 	public takeObject(String s) {
-		this.st = s;
+		this.st =  s;
+		this.value = (double) s.length();
 	}
 
 	public takeObject(Double s) {
-		this.i = s;
+		this.value = s;
 	}
 
 	@Override
 	public int compareTo(takeObject o) {
-
-		if (this.st == null) {
-			if (this.i > o.i) {
+			if (this.value > o.value) {
 				return 1;
-			} else if (this.i < o.i) {
+			} else if (this.value < o.value) {
 				return -1;
 			} else
 				return 0;
-		} else {
-			if (this.st.length() > o.st.length()) {
-				return 1;
-			} else if (this.st.length() < o.st.length()) {
-				return -1;
-			} else
-				return 0;
-		}
-
 	}
 
 	public static void testMax(takeObject ...e) {
@@ -46,11 +35,11 @@ class takeObject implements Comparable<takeObject> {
 			}
 		}
 		
-		if(e[0].i==null) {
-			System.out.println(e[0].st);
+		if(e[0].st==null) {
+			System.out.println("Greatest is" + e[0].value);
 		}
 		else
-			System.out.println(e[0].i);
+			System.out.println("Greatest is" + e[0].st);
 //		if (e1.compareTo(e2) == 1 && e1.compareTo(e3) == 1) {
 //			System.out.println("e1 is Greatest");
 //		} else if (e2.compareTo(e1) == 1 && e2.compareTo(e3) == 1) {
