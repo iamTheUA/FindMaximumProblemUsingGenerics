@@ -1,4 +1,4 @@
-package Day13;
+package com.comapany.day13;
 
 import java.util.Scanner;
 
@@ -14,11 +14,11 @@ public class FindMaximumProblemUsingGenerics {
 		Scanner sc = new Scanner(System.in);
 
 		// Enter 3 String or 3 Number.
-		takeObject e1 = new takeObject(-12d);
-		takeObject e2 = new takeObject(12d);
-		takeObject e3 = new takeObject(10d);
+		TakeObject e1 = new TakeObject(-12d);
+		TakeObject e2 = new TakeObject(12d);
+		TakeObject e3 = new TakeObject(10d);
 
-		takeObject.testMax(e1, e2, e3);
+		TakeObject.testMax(e1, e2, e3);
 	}
 }
 
